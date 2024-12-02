@@ -11,7 +11,8 @@ Inicialmente será necessário iniciar um cluster K8s, para fazer isso você pod
 
 Comece rodando o comando `minikube addons enable metrics-server` para habilitar o sistema de métricas no k8s, que é necessário para o autoscaler funcionar
 
-Comece criando um cluster rodando o comando:
+Depois crie um cluster rodando o comando:
+
 ``minikube start``
 Para garantir que o cluster está rodando corretamente você pode rodar o comando `kubectl get nodes` se o comando listar pelo menos um nó o cluster está rodando corretamente.
 Com o cluster rodando, rode o comando `helm install my-app app` isto irá criar os recursos necessários para a aplicação dentro do cluster. Depois disso rode o comando `minikube tunnel`(preferencialmente rode isso em outro terminal) este comando irá expor o load balancer criado no cluster para a sua máquina, para que seja possível chamar a aplicação como um serviço local.
