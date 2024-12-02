@@ -9,6 +9,8 @@
 ## Como rodar o projeto.
 Inicialmente será necessário iniciar um cluster K8s, para fazer isso você pode usar a sua ferramenta de escolha, no caso deste projeto foi escolhido usar [minikube](https://minikube.sigs.k8s.io/docs/) uma ferramenta de criação e gerenciamento de clusters K8s.
 
+Comece rodando o comando `minikube addons enable metrics-server` para habilitar o sistema de métricas no k8s, que é necessário para o autoscaler funcionar
+
 Comece criando um cluster rodando o comando:
 ``minikube start``
 Para garantir que o cluster está rodando corretamente você pode rodar o comando `kubectl get nodes` se o comando listar pelo menos um nó o cluster está rodando corretamente.
